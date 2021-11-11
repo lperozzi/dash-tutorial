@@ -3,16 +3,15 @@ from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 from dash import dcc
 from dash import html
-import inspect
+# import inspect
 
 import pandas as pd
 import plotly.figure_factory as ff
 import numpy as np
 import math
-import plotly.express as px  # (version 4.7.0)
-import plotly.graph_objects as go
-import json
-import dash  # (version 1.12.0) pip install dash
+# import plotly.express as px  # (version 4.7.0)
+# import plotly.graph_objects as go
+# import json
 import geopandas as gpd
 
 
@@ -31,7 +30,7 @@ opacity=0.5
 ###################################################
 app = dash.Dash(__name__, 
                 external_stylesheets=[dbc.themes.LUX],
-                title='GECOS | Geothermal chance of success',
+                title='GEOMAAP.io | Hexbin Map example',
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.2'}]
                 )
@@ -66,6 +65,7 @@ navbar = dbc.Navbar(
 #############  Controls ##########################
 ###################################################
 
+# Range Slider
 targetdepth_tab = dbc.Card(
     dbc.CardBody(
         [
@@ -101,6 +101,9 @@ targetdepth_tab = dbc.Card(
         ]
     )
 )
+
+
+# Colormap choice and Hexbin resolution
 
 colorscale_names = ['Greys','RdBu','Viridis','Magma','Jet','IceFire']
 
