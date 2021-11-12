@@ -16,6 +16,7 @@ import geopandas as gpd
 
 
 LOGO = "https://raw.githubusercontent.com/lperozzi/personale_web/preview/data/logo_white.png"
+
 cos = pd.read_csv('static/cos.csv')
 
 #  define earth radius (in meters) for hexagone resolution calculation)
